@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_01_143949) do
+ActiveRecord::Schema.define(version: 2021_01_12_210914) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 2020_08_01_143949) do
     t.datetime "end_time"
     t.text "days", default: [], array: true
     t.decimal "grade"
-    t.text "syllabus"
     t.text "semester"
     t.text "year"
     t.text "description"
@@ -31,11 +30,39 @@ ActiveRecord::Schema.define(version: 2020_08_01_143949) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "extra_curriculars", force: :cascade do |t|
+    t.text "title"
+    t.text "group"
+    t.text "duties", default: [], array: true
+    t.date "start"
+    t.date "end"
+    t.integer "hours"
+    t.text "contact_name"
+    t.text "contact_phone"
+    t.text "contact_email"
+    t.boolean "paid"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.date "birth_day"
+    t.text "location"
+    t.text "description"
+    t.boolean "traditional"
+    t.text "hobbies", default: [], array: true
+    t.text "interests", default: [], array: true
+  end
+
+  create_table "work_experiences", force: :cascade do |t|
+    t.text "title"
+    t.text "company"
+    t.text "company_location"
+    t.text "duties", default: [], array: true
+    t.date "start"
+    t.date "end"
   end
 
 end

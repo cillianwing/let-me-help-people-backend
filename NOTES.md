@@ -18,3 +18,21 @@
 ### LORs
 * Contact info, status (notified, requested, received)
 ### Student Planner (Less Important)
+
+## Models
+
+### users
+* email, password, age, location, description, traditional, hobbies, interests
+### med_apps
+* school, status and attachments for various items (PS, secondaries, application, interview, decision)
+### courses
+* number, name, professor, time (start/end), days, grade, semester, year, description
+### extra_curriculars
+* title, company/group, duties (array), dates (start/end), hours completed, contact info, paid/unpaid
+* eventually would like to have some sort of journal feature but that is not a primary concern
+### work_experiences
+* title, company name, company location, duties (array), dates (start/end)
+### essays
+* name, attachment
+### letters_of_rec
+* name, title, company/school, attachment
