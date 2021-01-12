@@ -1,6 +1,9 @@
 class User < ApplicationRecord
   has_secure_password
 
-  validates_presence_of :email 
-  validates_uniqueness_of :email
+  has_many :extra_curriculars
+  has_many :work_experiences
+
+  validates :email, presence: true, uniqueness: true
+  validates :password, :birth_day, :location, :traditional, presence: true
 end
