@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_secure_password
 
+  has_many :courses
   has_many :extra_curriculars
   has_many :work_experiences
 
