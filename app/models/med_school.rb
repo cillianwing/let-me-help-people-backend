@@ -1,0 +1,2 @@
+class MedSchool < ApplicationRecord
+end

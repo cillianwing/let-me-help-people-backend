@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_13_002720) do
+ActiveRecord::Schema.define(version: 2021_01_13_004654) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,6 +58,20 @@ ActiveRecord::Schema.define(version: 2021_01_13_002720) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_med_apps_on_user_id"
+  end
+
+  create_table "med_schools", force: :cascade do |t|
+    t.text "name"
+    t.text "location"
+    t.text "degree_type"
+    t.integer "students"
+    t.text "website"
+    t.text "mission_statement"
+    t.text "school_type"
+    t.money "tuition", scale: 2
+    t.money "cost_of_attendance", scale: 2
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|

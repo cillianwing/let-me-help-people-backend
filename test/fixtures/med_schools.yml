@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  location: MyText
+  degree_type: MyText
+  students: 1
+  website: MyText
+  mission_statement: MyText
+  school_type: MyText
+  tuition: 
+  cost_of_attendance: 
+
+two:
+  name: MyText
+  location: MyText
+  degree_type: MyText
+  students: 1
+  website: MyText
+  mission_statement: MyText
+  school_type: MyText
+  tuition: 
+  cost_of_attendance: 
