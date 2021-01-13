@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_12_215006) do
+ActiveRecord::Schema.define(version: 2021_01_13_002720) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,21 @@ ActiveRecord::Schema.define(version: 2021_01_12_215006) do
     t.text "contact_phone"
     t.text "contact_email"
     t.boolean "paid"
+  end
+
+  create_table "med_apps", force: :cascade do |t|
+    t.integer "school_id"
+    t.text "primary_app"
+    t.text "secondary_app"
+    t.text "personal_statement"
+    t.text "primary_essays"
+    t.text "secondary_essays"
+    t.text "status"
+    t.text "details"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_med_apps_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
