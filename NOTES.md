@@ -30,7 +30,7 @@
 ### med_apps
 * school_id, primary app, secondary app, personal statement, primary essays, secondary essays, status, details
 ### med_schools
-* name, location, degree type, students, website, mission statement, school type (public/private), tuition, cost of attendance
+* name, location, degree type, students, website, mission statement, school type (public/private), tuition (resident/non-resident, per year, total), cost of attendance
 ### courses
 * number, name, professor, time (start/end), days, grade, semester, year, description
 ### extra_curriculars
