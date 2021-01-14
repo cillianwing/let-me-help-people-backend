@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_13_010426) do
+ActiveRecord::Schema.define(version: 2021_01_14_185213) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,14 +70,14 @@ ActiveRecord::Schema.define(version: 2021_01_13_010426) do
     t.text "school_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.money "resident_first", scale: 2
-    t.money "resident_second", scale: 2
-    t.money "resident_third", scale: 2
-    t.money "resident_fourth", scale: 2
-    t.money "non_resident_first", scale: 2
-    t.money "non_resident_second", scale: 2
-    t.money "non_resident_third", scale: 2
-    t.money "non_resident_fourth", scale: 2
+    t.integer "resident_first"
+    t.integer "resident_second"
+    t.integer "resident_third"
+    t.integer "resident_fourth"
+    t.integer "non_resident_first"
+    t.integer "non_resident_second"
+    t.integer "non_resident_third"
+    t.integer "non_resident_fourth"
   end
 
   create_table "users", force: :cascade do |t|
